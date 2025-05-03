@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fantasy Hackathon</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Fantasy Hackathon</h1>
+    <nav>
+      <a href="#map">Мапа</a>
+      <a href="#team">Команда</a>
+      <a href="#media">Атмосфера</a>
+    </nav>
+  </header>
+
+  <section id="intro">
+    <p>Вас запрошено на Хакатон у світі Кодула. Обери шлях, збери команду — і почни свою пригоду.</p>
+  </section>
+
+  <section id="map">
+    <h2>Мапа світу</h2>
+    <p>Обери локацію для дослідження:</p>
+    <ul>
+      <li><a href="#castle">Замок Ідей</a></li>
+      <li><a href="#library">Бібліотека Коду</a></li>
+      <li><a href="#arena">Арена Проєктів</a></li>
+    </ul>
+
+    <div id="castle"><strong>Замок Ідей:</strong> тут народжуються хакатонні концепції.</div>
+    <div id="library"><strong>Бібліотека Коду:</strong> древня база знань програмістів.</div>
+    <div id="arena"><strong>Арена Проєктів:</strong> змагання між командами.</div>
+  </section>
+
+  <section id="team">
+    <h2>Обери свою команду</h2>
+    <button onclick="showMessage('wizard')">Кодомаг</button>
+    <button onclick="showMessage('designer')">Арт-друїд</button>
+    <button onclick="showMessage('devops')">Гном DevOps</button>
+
+    <p id="team-message"></p>
+  </section>
+
+  <section id="media">
+    <h2>Атмосфера</h2>
+    <p>Ось зображення з нашого магічного світу:</p>
+    <img src="fantasy-world.jpg" alt="Фентезі-світ" width="500" />
+    <p>І музика, яка супроводжує пригоди:</p>
+    <audio controls>
+      <source src="fantasy-theme.mp3" type="audio/mpeg" />
+      Ваш браузер не підтримує аудіо.
+    </audio>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Fantasy Hackathon</p>
+  </footer>
+
+  <script>
+    function showMessage(role) {
+      const msg = {
+        wizard: "Кодомаг — володар JavaScript!",
+        designer: "Арт-друїд — створює зачарований дизайн.",
+        devops: "Гном DevOps — забезпечує безперервну магію."
+      };
+      document.getElementById("team-message").innerText = msg[role];
+    }
+  </script>
+</body>
+</html>
